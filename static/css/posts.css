@@ -1,0 +1,164 @@
+.gb-content {
+
+  *:first-child {
+    margin-top: 28px;
+  }
+
+  *:is(h1,h2,h3,h4,h5,h6) {
+    margin-top: 56px;
+  }
+
+  *:is(hr,blockquote,iframe) {
+    margin-top: 48px;
+  }
+
+  *:is(ul,ol) {
+    padding-left: 28px;
+  }
+  
+  p {
+    margin-top: 28px;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+  
+  h2 {
+    font-size: 1.875rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  hr { 
+    color: #e5e7eb;
+  }
+
+  a {
+    color: #65a30d;
+    text-decoration: underline;
+  }
+
+  blockquote {
+    border-left: 4px solid #bef264;
+    padding-left: 2rem;
+  }
+  
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+  }
+
+  li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+  }
+
+  .kg-button-card {
+    margin-top: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .kg-btn {
+    font-size: 1em;
+    height: unset;
+    line-height: 1.2em;
+    padding: .6em 1.2em;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .kg-btn-accent {
+    background-color: #bef264;
+    color: #000;
+  }
+
+  .kg-file-card {
+    display: flex;
+    box-sizing: border-box;
+  }
+
+  .kg-file-card a.kg-file-card-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 12px;
+    min-height: 92px;
+    background: #fff;
+    color: #222;
+    border: 1px solid rgb(124 139 154 / 25%);
+    border-radius: 5px;
+    transition: all ease-in-out .35s;
+    text-decoration: none;
+    width: 100%;
+  }
+  .kg-file-card.kg-card .kg-file-card-contents {
+    margin: 4px 8px 6px;
+  }
+
+  .kg-file-card-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 4px 8px;
+    width: 100%;
+  }
+
+  .kg-file-card-title {
+    margin-top: 0px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3em;
+  }
+
+  .kg-file-card-metadata {
+    display: inline;
+    font-size: 14px;
+    line-height: 1.3em;
+    margin-top: 5px;
+  }
+
+  .kg-file-card-filename {
+    display: inline;
+    font-weight: 400;
+  }
+  
+  .kg-file-card-filesize {
+    display: inline-block;
+    font-size: 14px;
+    opacity: .6;
+    margin-left: 4px;
+  }
+
+  .kg-file-card-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    min-width: 80px;
+    height: 100%;
+    min-height: 80px;
+  }
+
+  .kg-file-card-icon svg {
+    width: 24px;
+    height: 24px;
+    color: #65a30d;
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부천환경교육센터</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script type="module" src="/static/js/router.js"></script>
+    <script type="module" src="/static/js/util.js"></script>
+</head>
+<body>
+    <div class="flex justify-center">
+        <div class="hidden sm:flex sm:h-screen sm:w-full sm:max-w-lg sm:items-center">
+            <div class="w-full text-4xl font-black">
+                <div class="text-orange-500">생명의 길</div>
+                <div class="text-lime-500">푸르른 녹색의 세상</div>
+                <div>부천환경교육센터</div>
+                <div class="-ml-7 flex items-center p-3">
+                    <img src="./static/image/qrcode.svg" alt="qrcode" class="inline h-32 w-32 p-6" />
+                    <div class="text-base font-normal">
+                        <div>부천환경교육센터가</div>
+                        <div>기후정의라는 큰 명제</div>
+                        <div>앞에 새롭게 섭니다.</div>
+                        <a href="https://forms.gle/3mMLWXaDR5ZEVXHv6" target="_blank " class="text-lime-500 font-bold">
+                            회원가입하기
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div 
+            class="h-screen w-full max-w-lg overflow-x-hidden shadow-2xl"
+            style="min-height: -webkit-fill-available"
+        >
+            <div class="bg-white">
+                <div class="flex justify-between max-w-7xl p-4">
+                    <span class="text-xl font-bold">
+                        <a href="/" data-link>부천환경교육센터</a>
+                    </span>
+                    <span class="rounded-full bg-lime-300 py-2 px-3 text-sm font-bold text-lime-900">
+                        <a href="https://forms.gle/3mMLWXaDR5ZEVXHv6" target="_blank">
+                            가입하기
+                        </a>
+                    </span>
+                </div>
+            </div>
+            
+            <div id="app"></div>
+
+            <div class="border-y-1 border-gray-300 p-4">
+                <div>부천환경교육센터</div>
+                <div class="mt-1 text-sm">
+                    <div>
+                        <span class="mr-2 text-gray-500">대표자</span>
+                        <span class="text-gray-700">이택규</span>
+                    </div>
+                    <div>
+                        <span class="mr-2 text-gray-500">소재지</span>
+                        <span class="text-gray-700">경기도 부천시 원미로 156번길 38</span>
+                    </div>
+                    <div>
+                        <span class="mr-2 text-gray-500">연락처</span>
+                        <span class="text-gray-700">032-668-9711</span>
+                    </div>
+                </div>
+            </div>
+            <div class="align-center flex justify-center p-8">
+                <span class="text-xs font-thin">
+                    ⓒ 2025 부천환경교육센터
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
