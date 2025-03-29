@@ -1,4 +1,4 @@
-const API_URL = 'https://bceec.arkaive.org/ghost/api/content';
+const API_URL = 'https://bceec-api.arkaive.org/ghost/api/content';
 const API_KEY = '09e290016615f6d73b26b51072';
 
 window.api = async (...args) => {
