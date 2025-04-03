@@ -8,7 +8,7 @@ loadCSS("https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.cs
 export default class extends View {
     constructor(params) {
         super(params);
-        this.setTitle("부천환경교육센터 | 홈");
+        this.setTitle("부천환경교육센터");
         this.featuredData = null;
         this.tagsData = null;
         this.resolvedTagsData = null;

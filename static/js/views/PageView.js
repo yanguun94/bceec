@@ -8,23 +8,18 @@ export default class extends View {
         super(params);
         this.postId = params.id;
         this.setTitle("부천환경교육센터");
-        this.postData = null;
+        this.pageData = null;
     }
 
     async render() {
-        this.data = await api(`/posts/${this.postId}?include=authors,tags&formats=html`);
-        this.postData = this.data.posts[0];
+        this.data = await api(`/pages/${this.postId}?formats=html`);
+        this.pageData = this.data.pages[0];
 
         return `
             <div class="p-4">
-                <div class="text-gray-800">${this.postData.primary_tag.name}</div>
-                <h1 class="text-4xl my-2">${this.postData.title}</h1>
-                <div class="text-sm text-gray-500 my-4">
-                    <span>${this.postData.primary_author.name}</span>
-                    <span class="mx-2">${this.formatDate(this.postData.published_at)}</span>
-                </div>
+                <h1 class="text-4xl my-2">${this.pageData.title}</h1>
                 <div class="gb-content">
-                    ${this.postData.html}
+                    ${this.pageData.html}
                 </div>
             </div>
         `;
