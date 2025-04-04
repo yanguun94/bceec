@@ -59,7 +59,7 @@ export default class extends View {
                                             <div class="flex flex-col">
                                                 <h2 class="text-lg">${item.name}</h2>
                                             </div>
-                                            <img class="aspect-square object-cover rounded-full w-1/5 border-1" src="${item.feature_image}" alt="${item.feature_image_alt}">
+                                            <img class="aspect-square object-cover rounded-full w-16" src="${item.feature_image}" alt="${item.feature_image_alt}">
                                         </div>
                                         <p class="py-4">${item.description}</p>
                                         <ul class="h-full">
@@ -120,7 +120,8 @@ export default class extends View {
         }).mount();
     }
 
-    async loadMorePosts(button) {
+    async loadMorePosts(event) {
+        const button = event.target;
         const currentPage = this.latestPostsData.meta.pagination.page;
         const totalPages = this.latestPostsData.meta.pagination.pages;
         if (currentPage < totalPages) {
