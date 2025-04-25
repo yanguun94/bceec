@@ -86,26 +86,27 @@ export default class extends View {
                     </div>
                 </div>
                 <div>
-                    <h1 class="text-lg font-bold p-4">
+                    <h1 class="text-lg font-bold pt-4 px-4">
                         <span class="text-lime-300">최신</span> 소식
                     </h1>
                     <ul id="latest-posts">
                         ${this.latestPostsData.posts.map(post => `
-                            <li class="flex flex-col py-4">
+                            <li class="flex flex-col p-4">
                                 <a href="/posts/${post.id}" data-link>
-                                    <img class="aspect-2/1 object-cover rounded-lg w-full p-4" src="${post.feature_image}" alt="${post.feature_image_alt}">
-                                    <h3 class="font-bold px-6 mb-4">${post.title}</h3>
-                                    <p class="text-sm px-8 text-gray-500">${post.excerpt}</p>
+                                    <img class="aspect-2/1 object-cover rounded-lg w-full border-1 border-gray-200" src="${post.feature_image}" alt="${post.feature_image_alt}">
+                                    <div class="pt-4 px-4">
+                                        <h3 class="font-bold">${post.title}</h3>
+                                        <div class="text-sm text-gray-500 mt-1">${post.excerpt}</div>
+                                    </div>
                                 </a>
                             </li>
-                            ${post !== this.latestPostsData.posts[this.latestPostsData.posts.length - 1] ? '<div class="px-4"><hr></div>' : ''}
+                            ${post !== this.latestPostsData.posts[this.latestPostsData.posts.length - 1] ? '<hr class="mx-4 text-gray-300"/>' : ''}
                         `).join('')}
                     </ul>
                 </div>
                 <div class="flex justify-center p-4">
-                    <button class="more p-2 w-full text-sm font-bold rounded-xl bg-lime-300" data-event="click:loadMorePosts">더보기</button>
+                    <button class="more p-2 w-full text-sm rounded-xl bg-lime-300" data-event="click:loadMorePosts">더보기</button>
                 </div>
-            </div>
         `;
     }
 
