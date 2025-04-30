@@ -1,7 +1,4 @@
 import View from "./View.js";
-import { loadCSS } from "../util.js";
-
-loadCSS("../../static/css/screen.css");
 
 export default class extends View {
     constructor(params) {
@@ -26,11 +23,9 @@ export default class extends View {
                     <span>${this.postData.primary_author.name}</span>
                     <span class="mx-2">${this.formatDate(this.postData.published_at)}</span>
                 </div>
-                <div class="gb-content">
-                    ${this.postData.html}
-                </div>
+                <div id="gh-content-container" class="py-4"></div>
             </div>
-            <h1 class="text-lg font-bold pt-4 px-4 border-t-1 border-gray-300">
+            <h1 class="text-lg font-bold px-4 pt-4">
                 <span class="text-lime-300">다른</span> 소식
             </h1>
             <div class="p-4">
@@ -50,6 +45,36 @@ export default class extends View {
                 </ul>
             </div>
         `;
+    }
+
+    
+    async rendered() {
+        const gbContentContainer = document.getElementById("gh-content-container");
+        this.attachShadowDOM(gbContentContainer, this.postData.html);
+    }
+
+    attachShadowDOM(container, htmlContent) {
+        // Attach Shadow DOM
+        const shadowRoot = container.attachShadow({ mode: "open" });
+
+        // Load external CSS into Shadow DOM
+        const screen = document.createElement("link");
+        screen.setAttribute("rel", "stylesheet");
+        screen.setAttribute("href", "/static/css/screen.css");
+        
+        const cards = document.createElement("link");
+        cards.setAttribute("rel", "stylesheet");
+        cards.setAttribute("href", "/static/css/cards.css");
+
+        // Content for Shadow DOM
+        const content = document.createElement("section");
+        content.className = "gh-content";
+        content.innerHTML = htmlContent;
+
+        // Append CSS and content to Shadow DOM
+        shadowRoot.appendChild(screen);
+        shadowRoot.appendChild(cards);
+        shadowRoot.appendChild(content);
     }
 
     formatDate(isoString) {
